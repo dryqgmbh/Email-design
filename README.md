@@ -9,6 +9,8 @@ Campaign / CMP**.
 | Datei | Beschreibung |
 |---|---|
 | `zolex-live-2027-aussteller-akquise.html` | Das fertige E-Mail-Template (600 px, Tabellen-Layout, Inline-CSS) |
+| `index.html` | Vorschau-Seite (Desktop/Mobil, Platzhalter-Demo, Bild-Blockade simulieren) |
+| `vercel.json` | Vercel als reines Static-Hosting ohne Build-Schritt |
 | `assets/zolex-live-2027-banner.jpg` | Briefkopf / Banner – Anzeige 600 × 159 px (Datei 1200 × 318 px für Retina) |
 | `assets/zolex-live-2027-konfigurator.jpg` | Konfigurator-Visual – Anzeige 560 × 560 px (Datei 1120 × 1120 px) |
 | `assets/haken-pink.png` | Häkchen-Icon der Vorteilsliste – Anzeige 22 × 22 px (Datei 66 × 66 px) |
@@ -93,13 +95,40 @@ Gmail und Outlook blockiert.
 - Gmail-/iOS-Fixes gegen automatische Link-Erkennung und Zitat-Abschneidung
 - `color-scheme: light` gegen ungewollte Dark-Mode-Invertierung
 
-## Vorschau lokal ansehen
+## Vorschau
+
+### Auf Vercel
+
+Das Repo ist ein reines Static-Site-Projekt. `vercel.json` schaltet Build- und
+Install-Schritt ab, `index.html` im Root ist die Einstiegsseite – damit liefert
+Vercel unter `/` die Vorschau statt eines 404.
+
+Einstellungen im Vercel-Projekt (falls das Projekt schon älter angelegt ist):
+
+- **Framework Preset:** Other
+- **Root Directory:** `./`
+- **Build Command / Install Command:** leer bzw. deaktiviert
+- **Output Directory:** `./`
+
+Die Vorschauseite lädt das Template zur Laufzeit, ersetzt die Bild-Basis-URL durch
+`assets/` und rendert es in einem iFrame. Das Template selbst wird dabei nicht
+verändert – es bleibt die einzige Quelle. Umschalten möglich zwischen Desktop
+(640 px) und Mobil (375 px), mit befüllten Beispiel-Platzhaltern und mit
+simuliert blockierten Bildern.
+
+### Bilder direkt von Vercel ausliefern
+
+Nach dem Deployment sind die Bilder unter
+`https://<projekt>.vercel.app/assets/…` per HTTPS erreichbar. Für einen schnellen
+Test-Versand kann die Bild-Basis-URL im Template darauf gesetzt werden. Für den
+Produktivversand sollten die Bilder in die Optimizely-Medienbibliothek oder auf
+eine eigene Domain – Vercel-Preview-Domains ändern sich pro Deployment.
+
+### Lokal
 
 ```bash
-python3 - <<'PY'
-s = open('zolex-live-2027-aussteller-akquise.html', encoding='utf-8').read()
-open('.preview.html', 'w', encoding='utf-8').write(
-    s.replace('https://lp.zoll-export-wissen.de/email/zolex-live-2027/', 'assets/'))
-PY
-# .preview.html im Browser öffnen
+npx serve .        # oder: python3 -m http.server 8000
 ```
+
+Dann `http://localhost:3000` (bzw. `:8000`) öffnen. Ein Doppelklick auf
+`index.html` funktioniert nicht – `file://` blockiert das Nachladen des Templates.

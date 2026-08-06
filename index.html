@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ZOLEX Live 2027 – Mailing-Vorschau</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230b4359'/%3E%3Cpath d='M8 12h16M8 16h16M8 20h10' stroke='%23e72e89' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E" />
+<style>
+  :root {
+    --bg: #f4f5f7;
+    --panel: #ffffff;
+    --line: #e2e5ea;
+    --ink: #12232e;
+    --muted: #6b7a85;
+    --pink: #e72e89;
+    --teal: #0b4359;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--pink); }
+
+  header {
+    background: var(--teal);
+    color: #fff;
+    padding: 22px 20px 20px;
+  }
+  header .in { max-width: 1040px; margin: 0 auto; }
+  header h1 { margin: 0 0 4px; font-size: 19px; font-weight: 700; letter-spacing: -0.01em; }
+  header p { margin: 0; font-size: 13px; color: #b9cdd8; }
+
+  .meta {
+    max-width: 1040px;
+    margin: 18px auto 0;
+    padding: 0 20px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 12px 14px;
+  }
+  .card .lbl {
+    font-size: 11px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .card .val { font-size: 14px; line-height: 1.45; }
+
+  .bar {
+    max-width: 1040px;
+    margin: 16px auto 0;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+  }
+  .seg {
+    display: inline-flex;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .seg button {
+    appearance: none;
+    border: 0;
+    background: transparent;
+    font: inherit;
+    font-size: 13px;
+    padding: 8px 14px;
+    cursor: pointer;
+    color: var(--ink);
+  }
+  .seg button + button { border-left: 1px solid var(--line); }
+  .seg button[aria-pressed="true"] { background: var(--pink); color: #fff; font-weight: 600; }
+
+  .toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 13px;
+    cursor: pointer;
+    user-select: none;
+  }
+  .toggle input { margin: 0; accent-color: var(--pink); }
+
+  .spacer { flex: 1 1 auto; }
+  .raw {
+    font-size: 13px;
+    text-decoration: none;
+    border: 1px solid var(--line);
+    background: var(--panel);
+    border-radius: 8px;
+    padding: 8px 12px;
+    color: var(--ink);
+  }
+  .raw:hover { border-color: var(--pink); color: var(--pink); }
+
+  .stage {
+    max-width: 1040px;
+    margin: 16px auto 40px;
+    padding: 0 20px;
+  }
+  .frame-wrap {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 14px;
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+  }
+  iframe {
+    border: 0;
+    display: block;
+    width: 640px;
+    max-width: 100%;
+    height: 4400px;
+    background: #efefef;
+    transition: width .18s ease;
+  }
+  iframe.mobile { width: 375px; max-width: 100%; }
+
+  .note {
+    max-width: 1040px;
+    margin: 0 auto 40px;
+    padding: 0 20px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .note code {
+    background: #eceff2;
+    border-radius: 4px;
+    padding: 1px 5px;
+    font-size: 12px;
+  }
+  .err {
+    background: #fff3f7;
+    border: 1px solid var(--pink);
+    color: #8c1a51;
+    border-radius: 10px;
+    padding: 14px 16px;
+    font-size: 14px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="in">
+    <h1>ZOLEX Live 2027 &ndash; Mailing Aussteller-Akquise</h1>
+    <p>Live-Vorschau des HTML-Templates f&uuml;r Optimizely Campaign</p>
+  </div>
+</header>
+
+<div class="meta">
+  <div class="card">
+    <div class="lbl">Betreff</div>
+    <div class="val">Treffen Sie &uuml;ber 100 Entscheider aus Zoll, Export und Einkauf &ndash; das gro&szlig;e Branchenevent!</div>
+  </div>
+  <div class="card">
+    <div class="lbl">Preheader</div>
+    <div class="val">Werden Sie Aussteller auf der ZOLEX Live 2027 im Historischen Wasserturm K&ouml;ln.</div>
+  </div>
+</div>
+
+<div class="bar">
+  <div class="seg" role="group" aria-label="Ansicht">
+    <button type="button" id="btnDesktop" aria-pressed="true">Desktop&nbsp;640&nbsp;px</button>
+    <button type="button" id="btnMobile" aria-pressed="false">Mobil&nbsp;375&nbsp;px</button>
+  </div>
+
+  <label class="toggle">
+    <input type="checkbox" id="fill" checked />
+    Platzhalter mit Beispieldaten f&uuml;llen
+  </label>
+
+  <label class="toggle">
+    <input type="checkbox" id="noimg" />
+    Bilder blockiert simulieren
+  </label>
+
+  <span class="spacer"></span>
+  <a class="raw" href="zolex-live-2027-aussteller-akquise.html" download>HTML herunterladen</a>
+</div>
+
+<div class="stage">
+  <div class="frame-wrap">
+    <iframe id="preview" title="E-Mail-Vorschau"></iframe>
+  </div>
+</div>
+
+<p class="note">
+  Die Vorschau l&auml;dt <code>zolex-live-2027-aussteller-akquise.html</code> und ersetzt die Bild-Basis-URL
+  durch den lokalen Ordner <code>assets/</code>. Am Template selbst wird nichts ge&auml;ndert &ndash;
+  es bleibt die einzige Quelle.
+</p>
+
+<script>
+  var SRC       = 'zolex-live-2027-aussteller-akquise.html';
+  var IMG_BASE  = 'https://lp.zoll-export-wissen.de/email/zolex-live-2027/';
+  var ORIGIN    = location.origin + location.pathname.replace(/[^/]*$/, '');
+
+  var DEMO = {
+    'Name': 'Frau Musterfrau',
+    'Beratungstermin_URL': 'https://lp.zoll-export-wissen.de/zolex-live/',
+    'Firma': 'ZOLEX GmbH',
+    'Strasse': 'Musterstraße 12',
+    'PLZ_Ort': '50667 Köln',
+    'Telefon': '+49 221 1234567',
+    'Email': 'info@zolex.de',
+    'Website_URL': 'https://www.zolex.de',
+    'Impressum_URL': 'https://www.zolex.de/impressum',
+    'Datenschutz_URL': 'https://www.zolex.de/datenschutz',
+    'Webversion_URL': '#',
+    'Abmelde_URL': '#'
+  };
+
+  var raw = null;
+  var frame = document.getElementById('preview');
+  var fill = document.getElementById('fill');
+  var noimg = document.getElementById('noimg');
+  var btnD = document.getElementById('btnDesktop');
+  var btnM = document.getElementById('btnMobile');
+
+  function render() {
+    if (raw === null) return;
+    var html = raw;
+
+    // Bilder aus dem lokalen assets/-Ordner statt von der Produktiv-URL laden
+    html = html.split(IMG_BASE).join(noimg.checked ? 'about:blank#' : ORIGIN + 'assets/');
+
+    if (fill.checked) {
+      html = html.replace(/\{\{\s*([A-Za-z_]+)\s*\}\}/g, function (m, key) {
+        return Object.prototype.hasOwnProperty.call(DEMO, key) ? DEMO[key] : m;
+      });
+    }
+
+    frame.srcdoc = html;
+  }
+
+  // srcdoc-iframes sind same-origin -> Höhe an den Inhalt anpassen
+  frame.addEventListener('load', function () {
+    try {
+      var d = frame.contentDocument;
+      if (d && d.body) frame.style.height = (d.body.scrollHeight + 24) + 'px';
+    } catch (e) { /* Fallback: CSS-Höhe */ }
+  });
+
+  function setView(mobile) {
+    frame.classList.toggle('mobile', mobile);
+    btnD.setAttribute('aria-pressed', String(!mobile));
+    btnM.setAttribute('aria-pressed', String(mobile));
+  }
+
+  btnD.addEventListener('click', function () { setView(false); });
+  btnM.addEventListener('click', function () { setView(true); });
+  fill.addEventListener('change', render);
+  noimg.addEventListener('change', render);
+
+  fetch(SRC, { cache: 'no-store' })
+    .then(function (r) {
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.text();
+    })
+    .then(function (t) { raw = t; render(); })
+    .catch(function (e) {
+      document.querySelector('.frame-wrap').innerHTML =
+        '<div class="err"><strong>Vorschau konnte nicht geladen werden.</strong><br />' +
+        'Diese Seite muss &uuml;ber einen Webserver laufen (z.&nbsp;B. Vercel oder ' +
+        '<code>npx serve</code>), nicht per Doppelklick &uuml;ber <code>file://</code>.<br />' +
+        'Fehler: ' + e.message + '</div>';
+    });
+</script>
+
+</body>
+</html>
